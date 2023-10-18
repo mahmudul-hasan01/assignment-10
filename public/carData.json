@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/qpxygXn/mustang-mach-e-1400-ford-auto-nights-04-min-1605846231.jpg",
+      "Brand_Name": "Ford"
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/CWB5YYf/2020-mercedes-amg-gt-007.webp",
+      "Brand_Name": "Mercedes-Benz"
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/R25HJJS/toyota-supra-philippines-5d10417bd82f5.jpg",
+      "Brand_Name": "Toyota"
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/9Vcssgd/tesla-model-x.jpg",
+      "Brand_Name": "Tesla"
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/nfXdxp8/c5a66c95f6e6465e8c3cc85b375eace1.jpg",
+      "Brand_Name": "Honda"
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/wQzQf32/IEIGHT-MAIN-i.jpg",
+      "Brand_Name": "BMW"
+    }
+  ]
+  

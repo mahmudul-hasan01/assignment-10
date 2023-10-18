@@ -4,11 +4,11 @@ import { useContext } from 'react';
 import { ContextData } from '../AuthProvider/AuthProvider';
 
 const NavBar = () => {
-    const {logOut,usars}=useContext(ContextData)
-    const hendleLogOut =()=>{
+    const { logOut, usars } = useContext(ContextData)
+    const hendleLogOut = () => {
         logOut()
-        .then()
-        .catch()
+            .then()
+            .catch()
     }
 
     const link = <>
@@ -29,7 +29,7 @@ const NavBar = () => {
                     isPending ? "pending" : isActive ? "active" : ""
                 }
             >
-               Add Product
+                Add Product
             </NavLink>
         </div>
         <div>
@@ -42,7 +42,7 @@ const NavBar = () => {
                 My Cart
             </NavLink>
         </div>
-        
+
     </>
     return (
         <div className='bg-slate-300 py-4'>
@@ -58,16 +58,18 @@ const NavBar = () => {
 
                     {
                         usars ?
-                        <button onClick={hendleLogOut}>SignOut</button> 
-                        : 
-                         <NavLink
-                        to="/Login"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                        }
-                    >
-                        Login
-                    </NavLink>
+                            <button onClick={hendleLogOut}>SignOut</button>
+                            :
+                            <div className='hover:text-red-600 text-xl'>
+                                <NavLink
+                                    to="/Login"
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "py-2 px-5 bg-sky-500" : ""
+                                    }
+                                >
+                                    Login
+                                </NavLink>
+                            </div>
                     }
                 </div>
             </div>
