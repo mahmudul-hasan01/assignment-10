@@ -12,6 +12,9 @@ import Login from './components/Register/Login/Login';
 import Register from './components/Register/Login/Register';
 import AddProduct from './components/AddProduct/AddProduct';
 import MyCart from './components/MyCart/MyCart';
+import Update from './components/MyCart/Update';
+import DetailsCard from './components/MyCart/DetailsCard';
+import AuthProvider from './components/AuthProvider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +39,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/MyCart",
-        element: <MyCart></MyCart>
+        element: <MyCart></MyCart>,
+        loader: ()=> fetch(`http://localhost:5000/cars`)
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({params})=> fetch(`http://localhost:5000/cars/${params.id}`)
+      },
+      {
+        path: "/details/:id",
+        element: <DetailsCard></DetailsCard>,
+        loader: ({params})=> fetch(`http://localhost:5000/cars/${params.id}`)
       }
     ]
   },
@@ -44,6 +58,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

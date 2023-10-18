@@ -1,7 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import carLogo from '../../assets/Car-Logo-PNG-HD-Isolated.png'
+import { useContext } from 'react';
+import { ContextData } from '../AuthProvider/AuthProvider';
 
 const NavBar = () => {
+    const {logOut,usars}=useContext(ContextData)
+    const hendleLogOut =()=>{
+        logOut()
+        .then()
+        .catch()
+    }
 
     const link = <>
         <div>
@@ -47,7 +55,12 @@ const NavBar = () => {
                     {link}
                 </div>
                 <div>
-                    <NavLink
+
+                    {
+                        usars ?
+                        <button onClick={hendleLogOut}>SignOut</button> 
+                        : 
+                         <NavLink
                         to="/Login"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : ""
@@ -55,6 +68,7 @@ const NavBar = () => {
                     >
                         Login
                     </NavLink>
+                    }
                 </div>
             </div>
         </div>

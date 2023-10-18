@@ -1,3 +1,6 @@
+import { data } from "autoprefixer";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
     const hendleDetails =(e)=>{
@@ -10,8 +13,23 @@ const AddProduct = () => {
         const Image =form.Image.value
         const Rating =form.Rating.value
         const description =form.description.value
-        const info = {name,BrandName,Type,Price,Image,Rating,description}
-        console.log(info)
+        const carInfo = {name,BrandName,Type,Price,Image,Rating,description}
+            fetch('http://localhost:5000/cars',{
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(carInfo)
+            })
+            .then(res=>res.json())
+            .then(data => {
+                console.log(data)
+                Swal.fire(
+                    'Update!',
+                    'Your file has been Update.',
+                    'success'
+                  )
+            })
     }
     return (
         <div className="w-[700px] h-[400px] bg-red-200 mx-auto">
@@ -54,7 +72,9 @@ const AddProduct = () => {
                     <input className="w-full" type="text" name="description" placeholder="Short description"/>
                 </div>
                 <div className="w-[75%] mx-auto mt-5">
-                    <button className="btn btn-neutral w-full">Add button</button>
+                   <Link>
+                     <button className="btn btn-neutral w-full">Add button</button>
+                   </Link>
                 </div>
             </form>
         </div>
