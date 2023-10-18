@@ -1,17 +1,17 @@
-// import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import BrandCard from "./BrandCard";
 // import Banner from "./Banner";
-// import BrendCard from "./BrendCard";
 
 const Home = () => {
-    // const brendData = useLoaderData()
+    const brendData = useLoaderData()
     return (
         <div>
             {/* <Banner></Banner> */}
-            {/* <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl mx-auto gap-5">
                 {
-                    brendData.map(item => <BrendCard key={item.id} brendData={item}></BrendCard>)
+                    brendData.map(item => <BrandCard key={item.id} brendData={item}></BrandCard>)
                 }
-            </div> */}
+            </div>
             
         </div>
     );

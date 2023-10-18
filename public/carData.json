@@ -1,32 +1,32 @@
 [
     {
       "id": 1,
-      "image": "https://i.ibb.co/qpxygXn/mustang-mach-e-1400-ford-auto-nights-04-min-1605846231.jpg",
+      "image": "https://i.ibb.co/YcTs7s5/Ford-logo-flat-svg.png",
       "Brand_Name": "Ford"
     },
     {
       "id": 2,
-      "image": "https://i.ibb.co/CWB5YYf/2020-mercedes-amg-gt-007.webp",
+      "image": "https://i.ibb.co/85BZsC3/1200px-Mercedes-Benz-Logo-11.jpg",
       "Brand_Name": "Mercedes-Benz"
     },
     {
       "id": 3,
-      "image": "https://i.ibb.co/R25HJJS/toyota-supra-philippines-5d10417bd82f5.jpg",
+      "image": "https://i.ibb.co/pLstPnT/Car-Company-Toyota-Logo-PNG-Vector-Free-Download.jpg",
       "Brand_Name": "Toyota"
     },
     {
       "id": 4,
-      "image": "https://i.ibb.co/9Vcssgd/tesla-model-x.jpg",
+      "image": "https://i.ibb.co/rfX0vQc/Tesla-Logo-1024x576.jpg",
       "Brand_Name": "Tesla"
     },
     {
       "id": 5,
-      "image": "https://i.ibb.co/nfXdxp8/c5a66c95f6e6465e8c3cc85b375eace1.jpg",
+      "image": "https://i.ibb.co/b1dX1sk/Honda-Logo.jpg",
       "Brand_Name": "Honda"
     },
     {
       "id": 6,
-      "image": "https://i.ibb.co/wQzQf32/IEIGHT-MAIN-i.jpg",
+      "image": "https://i.ibb.co/mDb2GKN/BMW-svg.png",
       "Brand_Name": "BMW"
     }
   ]

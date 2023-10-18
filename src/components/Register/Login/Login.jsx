@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ContextData } from "../../AuthProvider/AuthProvider";
+import logo1 from  "../../../assets/istockphoto-532378051-170667a.webp"
 
 const Login = () => {
     const {login}=useContext(ContextData)
@@ -18,13 +19,9 @@ const Login = () => {
         })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1> 
-                </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={hendleLogin} className="card-body">
+        <div style={{backgroundImage:`url:(${logo1})`}} className="hero min-h-screen w-full">
+           <div>
+           <form onSubmit={hendleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -45,8 +42,7 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
-                </div>
-            </div>
+           </div>
         </div>
     );
 };

@@ -15,6 +15,8 @@ import MyCart from './components/MyCart/MyCart';
 import Update from './components/MyCart/Update';
 import DetailsCard from './components/MyCart/DetailsCard';
 import AuthProvider from './components/AuthProvider/AuthProvider';
+import BrandDetails from './components/Home/BrandDetails';
+import BrandCard from './components/Home/BrandCard';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,11 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <DetailsCard></DetailsCard>,
         loader: ({params})=> fetch(`http://localhost:5000/cars/${params.id}`)
+      },
+      {
+        path: "/brandDetails/:id",
+        element: <BrandDetails></BrandDetails>,
+        loader: () =>fetch('http://localhost:5000/cars')
       }
     ]
   },
