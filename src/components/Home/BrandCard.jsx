@@ -4,11 +4,9 @@ const BrandCard = ({brendData}) => {
       const {image,Brand_Name}=brendData
       
     return (
-        <div>
-            <div className="card w-[90%] bg-base-100 shadow-xl">
-                
+            <div className="card w-[300px] bg-base-100 shadow-xl mt-10">
                 <figure className="px-10 pt-10">
-                    <img src={image} alt="img" className="rounded-xl w-full h-[400px]" />
+                    <img src={image} alt="img" className="rounded-xl w-full h-[150px]" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <Link to={`/brandDetails/${Brand_Name}`}>
@@ -16,7 +14,6 @@ const BrandCard = ({brendData}) => {
                     </Link>   
                 </div>
             </div>
-        </div>
     );
 };
 

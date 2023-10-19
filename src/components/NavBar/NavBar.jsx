@@ -12,31 +12,31 @@ const NavBar = () => {
     }
 
     const link = <>
-        <div>
+        <div className='text-xl'>
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-xl text-white rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2" : ""
                 }
             >
                 Home
             </NavLink>
         </div>
-        <div>
+        <div className='text-xl'>
             <NavLink
                 to="/AddProduct"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-xl text-white rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2" : ""
                 }
             >
                 Add Product
             </NavLink>
         </div>
-        <div>
+        <div className='text-xl'>
             <NavLink
                 to="/MyCart"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
+                    isPending ? "pending" : isActive ? "text-xl text-white rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2" : ""
                 }
             >
                 My Cart
@@ -45,7 +45,7 @@ const NavBar = () => {
 
     </>
     return (
-        <div className='bg-slate-300 py-4'>
+        <div className='py-4'>
             <div className='flex justify-between max-w-screen-lg mx-auto items-center'>
                 <div>
                     <img className='w-[200px]' src={carLogo} alt="" />
@@ -60,11 +60,11 @@ const NavBar = () => {
                         usars ?
                             <button onClick={hendleLogOut}>SignOut</button>
                             :
-                            <div className='hover:text-red-600 text-xl'>
+                            <div className='text-xl'>
                                 <NavLink
                                     to="/Login"
                                     className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "py-2 px-5 bg-sky-500" : ""
+                                        isPending ? "pending" : isActive ? "text-xl text-white rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2" : ""
                                     }
                                 >
                                     Login
