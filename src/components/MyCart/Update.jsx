@@ -17,7 +17,7 @@ const Update = () => {
         const Rating = form.Rating.value
         const description = form.description.value
         const carInfo = { name, BrandName, Type, Price, Image, Rating, description }
-        fetch(`http://localhost:5000/cars/${_id}`, {
+        fetch(`https://assignment-10-e-m.vercel.app/cars/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

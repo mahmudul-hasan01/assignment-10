@@ -12,7 +12,7 @@ const AddProduct = () => {
         const Rating =form.Rating.value
         const description =form.description.value
         const carInfo = {name,BrandName,Type,Price,Image,Rating,description}
-                fetch('http://localhost:5000/cars',{
+                fetch('https://assignment-10-e-m.vercel.app/cars',{
                 method: 'POST',
                 headers: {
                     'Content-Type':'application/json'

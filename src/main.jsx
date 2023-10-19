@@ -11,12 +11,11 @@ import Home from './components/Home/Home';
 import Login from './components/Register/Login/Login';
 import Register from './components/Register/Login/Register';
 import AddProduct from './components/AddProduct/AddProduct';
-import MyCart from './components/MyCart/MyCart';
 import Update from './components/MyCart/Update';
-import DetailsCard from './components/MyCart/DetailsCard';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import BrandDetails from './components/Home/BrandDetails';
-import BrandCard from './components/Home/BrandCard';
+import DetailsButton from './components/Home/DetailsButton';
+import MyCart from './components/MyCart/MyCart';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('carData.json')
+        loader: () => fetch('carData.json')
       },
       {
         path: "/Login",
@@ -43,23 +42,24 @@ const router = createBrowserRouter([
       {
         path: "/MyCart",
         element: <MyCart></MyCart>,
-        loader: ()=> fetch(`http://localhost:5000/cars`)
+        loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params})=> fetch(`http://localhost:5000/cars/${params.id}`)
-      },
-      {
-        path: "/details/:id",
-        element: <DetailsCard></DetailsCard>,
-        loader: ({params})=> fetch(`http://localhost:5000/cars/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-e-m.vercel.app/cars/${params.id}`)
       },
       {
         path: "/brandDetails/:id",
         element: <BrandDetails></BrandDetails>,
-        loader: () =>fetch('http://localhost:5000/cars')
+        loader: () => fetch('https://assignment-10-e-m.vercel.app/cars')
+      },
+      {
+        path: "/cars/:id",
+        element: <DetailsButton></DetailsButton>,
+        loader: ({ params }) => fetch(`https://assignment-10-e-m.vercel.app/cars/${params.id}`)
       }
+
     ]
   },
 ]);

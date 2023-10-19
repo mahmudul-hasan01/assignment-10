@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyCart = () => {
+const MyCartInfo = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const MyCart = () => {
     );
 };
 
-export default MyCart;
+export default MyCartInfo;

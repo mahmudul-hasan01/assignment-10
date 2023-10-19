@@ -4,7 +4,7 @@ const BrandCard = ({brendData}) => {
       const {image,Brand_Name}=brendData
       
     return (
-            <div className="card w-[300px] bg-base-100 shadow-xl mt-10">
+            <div className="card w-[300px] mx-auto bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="img" className="rounded-xl w-full h-[150px]" />
                 </figure>

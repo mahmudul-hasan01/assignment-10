@@ -1,5 +1,5 @@
 
-const DetailsCard = () => {
+const SwiperSlide = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const DetailsCard = () => {
     );
 };
 
-export default DetailsCard;
+export default SwiperSlide;

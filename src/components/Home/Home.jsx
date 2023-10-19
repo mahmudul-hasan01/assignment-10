@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             {/* <Banner></Banner> */}
-            <div className="grid grid-cols-1 md:grid-cols-3 max-w-screen-xl mx-auto gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 max-w-screen-xl mx-auto gap-5 mt-10">
                 {
                     brendData.map(item => <BrandCard key={item.id} brendData={item}></BrandCard>)
                 }
