@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-// import SwiperSlide from "./SwiperSlide";
 
 // import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const BrandDetailsCard = ({ detailsCard, details, setDetails, id }) => {
 
     return (
         <div>
-            {/* <SwiperSlide></SwiperSlide> */}
+            
             <div className="flex justify-around">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className="w-full h-full" src={Image} alt="Shoes" /></figure>

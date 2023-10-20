@@ -9,35 +9,35 @@ export const ContextData =createContext()
 
 const AuthProvider = ({children}) => {
 
-    const [usars,setUsers]=useState(null)
-    const [loding,setLoding]=useState(true)
+    const [users,setUsers]=useState(null)
+    const [loading,setLoading]=useState(true)
 
     const register = (email,password)=>{
-      setLoding(true)
+      setLoading(true)
       return createUserWithEmailAndPassword(auth,email,password)
     }
     const login =(email,password)=>{
-      setLoding(true)
+      setLoading(true)
       return signInWithEmailAndPassword(auth,email,password)
     }
     useEffect(()=>{
-      const unsubscribe =onAuthStateChanged(auth, usar =>{
-        setLoding(false)
-         setUsers(usar)
+      const unsubscribe =onAuthStateChanged(auth, user =>{
+        setLoading(false)
+         setUsers(user)
       })
       return ()=>{
         unsubscribe
       }
     },[])
     const logOut =()=>{
-      setLoding(true)
+      setLoading(true)
       return signOut(auth)
     }
     const googleLogin =()=>{
       return signInWithPopup(auth,provider)
     }
 
-    const userValue ={ register,login,logOut,usars,loding,googleLogin }
+    const userValue ={ register,login,logOut,users,loading,googleLogin }
     return (
        <ContextData.Provider value={userValue}>
          {children}

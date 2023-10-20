@@ -35,48 +35,50 @@ const Update = () => {
 
     }
     return (
-        <div className="w-[700px] h-[400px] bg-red-200 mx-auto">
-            <form onSubmit={hendleUpdate}>
-                <div className="flex justify-around">
-                    <div className="flex flex-col">
-                        <span>Name</span>
-                        <input type="text" name="name" placeholder="Name" />
+        <div className="w-[100%] md:w-[720px] h-[490px] bg-stone-300 rounded-lg mx-auto mt-3">
+            <form className="p-5" onSubmit={hendleUpdate}>
+                <div className="flex justify-around gap-5 my-2">
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Name</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="name" placeholder="Name" />
                     </div>
-                    <div className="flex flex-col">
-                        <span>Brand Name</span>
-                        <input type="text" name="BrandName" placeholder="Brand Name" />
-                    </div>
-                </div>
-
-                <div className="flex justify-around">
-                    <div className="flex flex-col">
-                        <span>Type</span>
-                        <input type="text" name="Type" placeholder="t" />
-                    </div>
-                    <div className="flex flex-col">
-                        <span>Price</span>
-                        <input type="text" name="Price" placeholder="Price" />
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Brand Name</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="BrandName" placeholder="Brand Name" />
                     </div>
                 </div>
 
-                <div className="flex justify-around">
-                    <div className="flex flex-col">
-                        <span>Image</span>
-                        <input type="text" name="Image" placeholder="Image" />
+                <div className="flex justify-around gap-5">
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Type</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="Type" placeholder="Type" />
                     </div>
-                    <div className="flex flex-col">
-                        <span>Rating</span>
-                        <input type="text" name="Rating" placeholder="Rating" />
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Price</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="Price" placeholder="Price" />
                     </div>
                 </div>
 
-                <div className="flex flex-col w-[75%] mx-auto">
-                    <span>Short description</span>
-                    <input className="w-full" type="text" name="description" placeholder="Short description" />
+                <div className="flex justify-around gap-5 ">
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Image</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="Image" placeholder="Image" />
+                    </div>
+                    <div className="flex flex-col flex-1">
+                        <span className="text-2xl">Rating</span>
+                        <input className="py-3 pl-4 rounded-lg" type="text" name="Rating" placeholder="Rating" />
+                    </div>
                 </div>
-                <div className="w-[75%] mx-auto mt-5">
-                    <button className="btn btn-neutral w-full">Add button</button>
+
+               <div>
+               <div className="flex flex-col  flex-1">
+                    <span className="text-2xl">Short description</span>
+                    <input className="py-6 pl-4 rounded-lg" type="text" name="description" placeholder="Description" />
                 </div>
+
+                <button className="btn btn-neutral w-full mt-3">Add Product</button>
+               </div>
+
             </form>
         </div>
     );

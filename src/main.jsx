@@ -16,6 +16,8 @@ import AuthProvider from './components/AuthProvider/AuthProvider';
 import BrandDetails from './components/Home/BrandDetails';
 import DetailsButton from './components/Home/DetailsButton';
 import MyCart from './components/MyCart/MyCart';
+import PrivateRoute from './PrivateRoute';
+import MyCartInfo from './components/MyCart/MyCartInfo';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/MyCart",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute> <MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
+      },
+      {
+        path: "/cart",
+        element:<MyCartInfo></MyCartInfo>,
         loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
       },
       {
