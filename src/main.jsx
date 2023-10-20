@@ -17,12 +17,14 @@ import BrandDetails from './components/Home/BrandDetails';
 import DetailsButton from './components/Home/DetailsButton';
 import MyCart from './components/MyCart/MyCart';
 import PrivateRoute from './PrivateRoute';
-import MyCartInfo from './components/MyCart/MyCartInfo';
+import ErrorPage from './ErrorPage';
+// import MyCartInfo from './components/MyCart/MyCartInfo';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainRoot></MainRoot>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -39,18 +41,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/AddProduct",
-        element: <AddProduct></AddProduct>
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path: "/MyCart",
         element: <PrivateRoute> <MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
+        loader: () => fetch(`http://localhost:5000/cart`)
       },
-      {
-        path: "/cart",
-        element:<MyCartInfo></MyCartInfo>,
-        loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
-      },
+      // {
+      //   path: "/cart",
+      //   element:<MyCartInfo></MyCartInfo>,
+      //   loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
+      // },
       {
         path: "/update/:id",
         element: <Update></Update>,
@@ -63,7 +65,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/cars/:id",
-        element: <DetailsButton></DetailsButton>,
+        element: <PrivateRoute><DetailsButton></DetailsButton></PrivateRoute>,
         loader: ({ params }) => fetch(`https://assignment-10-e-m.vercel.app/cars/${params.id}`)
       }
 

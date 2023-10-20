@@ -4,6 +4,7 @@ import { ContextData } from "../../AuthProvider/AuthProvider";
 import logo1 from "../../../assets/istockphoto-532378051-170667a.webp"
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const { login,googleLogin } = useContext(ContextData)
@@ -17,8 +18,12 @@ const Login = () => {
             .then(data => {
                 console.log(data.user)
             })
-            .catch(error => {
-                console.log(error.message)
+            .catch(() => {
+                return Swal.fire(
+                    'ERROR!',
+                    'Something is wrong.',
+                    'error'
+                  )
             })
     }
     const hendleGoogleLogin =()=>{

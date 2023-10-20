@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { ContextData } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const DetailsButton = () => {
+    const {users}=useContext(ContextData)
+    const email =users.email
     const data = useLoaderData()
     const { name, BrandName, Type, Price, Image, Rating, description, _id } = data
-    const datainfo = { name, BrandName, Type, Price, Image, Rating, description, _id }
+    const datainfo = { name, BrandName, Type, Price, Image, Rating, description, _id, email }
     const hendleinfo = () => {
         fetch('https://assignment-10-e-m.vercel.app/cart', {
             method: 'POST',
@@ -14,7 +19,11 @@ const DetailsButton = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                    Swal.fire(
+                      'Add to Cart Success Fully!',
+                      'Your file has been added.',
+                      'success'
+                    )
             })
     }
     return (

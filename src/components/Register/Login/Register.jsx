@@ -14,17 +14,14 @@ const Register = () => {
         const email =form.email.value
         const password =form.password.value
         register(email,password)
-        .then(data => {
-            console.log(data.user)
-        })
-        .catch(error => {
-            console.log(error.message)
+        .then(() => { })
+        .catch(() => {
         })
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(password)) {
             return Swal.fire(
-                'Update!',
-                'Your file has been Update.',
-                'success'
+                'ERROR!',
+                'Something is wrong.',
+                'error'
               )
           }
     }
