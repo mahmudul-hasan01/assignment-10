@@ -12,6 +12,7 @@ const AddProduct = () => {
         const Rating = form.Rating.value
         const description = form.description.value
         const carInfo = { name, BrandName, Type, Price, Image, Rating, description }
+        console.log(carInfo)
         fetch('https://assignment-10-e-m.vercel.app/cars', {
             method: 'POST',
             headers: {
@@ -32,7 +33,7 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className="w-[100%] md:w-[720px] h-[490px] bg-teal-300 rounded-lg mx-auto mt-3">
+        <div className="w-[100%] md:w-[720px] h-[490px] bg-sky-200 rounded-lg mx-auto mt-3">
             <form className="p-5" onSubmit={hendleDetails}>
                 <div className="flex justify-around gap-5 my-2">
                     <div className="flex flex-col flex-1">
@@ -41,7 +42,14 @@ const AddProduct = () => {
                     </div>
                     <div className="flex flex-col flex-1">
                         <span className="text-2xl">Brand Name</span>
-                        <input className="py-3 pl-4 rounded-lg" type="text" name="BrandName" placeholder="Brand Name" />
+                        <select className="py-3 pl-4 rounded-lg" name="BrandName">
+                            <option>Ford</option>
+                            <option>Tesla</option>
+                            <option>Honda</option>
+                            <option>BMW</option>
+                            <option>Toyota</option>
+                            <option> Mercedes-Benz</option>
+                        </select>
                     </div>
                 </div>
 

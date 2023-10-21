@@ -15,8 +15,12 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
         login(email, password)
-            .then(data => {
-                console.log(data.user)
+            .then(() => {
+                return Swal.fire(
+                    'Good!',
+                    'Successfully Login.',
+                    'success'
+                  )
             })
             .catch(() => {
                 return Swal.fire(

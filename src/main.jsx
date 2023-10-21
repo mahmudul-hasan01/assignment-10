@@ -18,7 +18,7 @@ import DetailsButton from './components/Home/DetailsButton';
 import MyCart from './components/MyCart/MyCart';
 import PrivateRoute from './PrivateRoute';
 import ErrorPage from './ErrorPage';
-// import MyCartInfo from './components/MyCart/MyCartInfo';
+import MyCartdata from './components/MyCart/MyCartdata';
 
 const router = createBrowserRouter([
   {
@@ -46,13 +46,13 @@ const router = createBrowserRouter([
       {
         path: "/MyCart",
         element: <PrivateRoute> <MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch(`http://localhost:5000/cart`)
+        loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
       },
-      // {
-      //   path: "/cart",
-      //   element:<MyCartInfo></MyCartInfo>,
-      //   loader: () => fetch(`https://assignment-10-e-m.vercel.app/cart`)
-      // },
+      {
+        path: "/my-cart/:email",
+        element:<MyCartdata></MyCartdata>,
+        loader: ({params}) => fetch(`https://assignment-10-e-m.vercel.app/my-cart/${params.email}`)
+      },
       {
         path: "/update/:id",
         element: <Update></Update>,

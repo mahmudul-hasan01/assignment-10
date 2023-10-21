@@ -44,7 +44,14 @@ const Update = () => {
                     </div>
                     <div className="flex flex-col flex-1">
                         <span className="text-2xl">Brand Name</span>
-                        <input className="py-3 pl-4 rounded-lg" type="text" name="BrandName" placeholder="Brand Name" />
+                        <select className="py-3 pl-4 rounded-lg" name="BrandName">
+                            <option>Ford</option>
+                            <option>Tesla</option>
+                            <option>Honda</option>
+                            <option>BMW</option>
+                            <option>Toyota</option>
+                            <option> Mercedes-Benz</option>
+                        </select>
                     </div>
                 </div>
 

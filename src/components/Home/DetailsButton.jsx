@@ -7,8 +7,8 @@ const DetailsButton = () => {
     const {users}=useContext(ContextData)
     const email =users.email
     const data = useLoaderData()
-    const { name, BrandName, Type, Price, Image, Rating, description, _id } = data
-    const datainfo = { name, BrandName, Type, Price, Image, Rating, description, _id, email }
+    const { name, BrandName, Type, Price, Image, Rating, description } = data
+    const datainfo = { name, BrandName, Type, Price, Image, Rating, description, email }
     const hendleinfo = () => {
         fetch('https://assignment-10-e-m.vercel.app/cart', {
             method: 'POST',
@@ -18,7 +18,7 @@ const DetailsButton = () => {
             body: JSON.stringify(datainfo)
         })
             .then(res => res.json())
-            .then(data => {
+            .then(() => {
                     Swal.fire(
                       'Add to Cart Success Fully!',
                       'Your file has been added.',

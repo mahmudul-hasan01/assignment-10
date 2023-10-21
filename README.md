@@ -1,8 +1,13 @@
-# React + Vite
+*client-side live link*
+**https://assignment-10-project-2005c.web.app/AddProduct**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+__There will be a form inside the add product route. if you click on the form button, the data will be stored in the databade__
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+__Created six brand name and image if click on brand name will take to another route__
+
+__The data is fetched form the database and shown inside the brand route__
+
+__There will be some cards inside the router, if you click on the card button, the details of the card will be shown in another router__
+
+__The card details will be inside the details router and there will be an add button click on the add button it will show in my card__

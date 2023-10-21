@@ -16,7 +16,9 @@ const BrandDetails = () => {
 
                 {
                     details.length ? details.map(item => <BrandDetailsCard key={item._id} id={id} details={details} setDetails={setDetails} detailsCard={item}></BrandDetailsCard>) :
-                        <p>not found</p>
+                        <div className="flex justify-center items-center ">
+                            <p className="py-3 px-4 text-2xl border-2 shadow-xl">First add the car!</p>
+                        </div>
                 }
             </div>
         </div>

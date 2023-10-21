@@ -53,7 +53,7 @@ const NavBar = () => {
             <div className='flex justify-between max-w-screen-lg mx-auto items-center'>
                 <div className='hidden lg:block'>
                     <img className='w-[200px]' src={carLogo} alt="" />
-                    <p className='text-3xl text-center'>Car point</p>
+                    <p className='text-3xl text-center py-2 px-4 shadow-xl'>Car Shop</p>
                 </div>
 
                 <div className="lg:hidden text-3xl" onClick={() => setOpen(!open)}>

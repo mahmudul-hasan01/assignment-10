@@ -14,7 +14,13 @@ const Register = () => {
         const email =form.email.value
         const password =form.password.value
         register(email,password)
-        .then(() => { })
+        .then(() => {
+            return Swal.fire(
+                'Good!',
+                'Successfully Register.',
+                'success'
+              )
+         })
         .catch(() => {
         })
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/.test(password)) {

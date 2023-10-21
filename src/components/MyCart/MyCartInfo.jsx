@@ -1,17 +1,19 @@
-import { useState } from "react";
+// import { useEffect } from "react";
 
-const MyCartInfo = ({cartData,deleteInfo, setDeleteInfo}) => {
-    const { name, BrandName, Type, Price, Image, Rating, description, _id, email } = cartData
+const MyCartInfo = ({cartInfo,deleteInfo, setDeleteInfo}) => {
+
+    const { name, BrandName, Type, Price, Image, Rating, description, _id, email } = cartInfo
 
     const hendleDelete =(id)=>{
-
-       fetch(`http://localhost:5000/cart/${id}`,{
+        console.log(id)
+       fetch(`https://assignment-10-e-m.vercel.app/cart/${id}`,{
         method: "DELETE"
        })
        .then(res => res.json())
        .then(datas=>{
-        const filters = deleteInfo.filter(info => info._id !== id)
-        setDeleteInfo(filters)
+        console.log(datas)
+        // const filters = deleteInfo.filter(info => info._id !== id)
+        // setDeleteInfo(filters)
        })
     }
     

@@ -3,6 +3,7 @@ import BrandCard from "./BrandCard";
 import Banner from "./Banner";
 import CarCollection from "./CarCollection";
 import HappyCustomer from "./HappyCustomer";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
     const brendData = useLoaderData()
